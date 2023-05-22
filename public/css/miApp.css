@@ -1,0 +1,61 @@
+/**************************************formulario de login ********************************************/
+.form-login{
+ margin-top: 10%;
+ box-shadow: 1px 2px 9px black;
+  background-color: white;
+}
+.form-login .titulo{
+    text-align: center;
+    font-family:'Times New Roman', Times;
+    padding-bottom: 5%;
+   
+}
+.form-login label{
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+.form-login input:active{
+    background-color: rgb(144, 213, 234);
+}
+
+
+.form-login .btn{
+    width: 100%;
+    text-align: center;
+}
+/******************************************cuerpo de la plantillabase2*/
+body{
+   /* background-color: rgb(201, 240, 240);*/
+   background-image: linear-gradient( rgb(205, 241, 241),white);
+   background-repeat: no-repeat;
+}
+.logo{
+  
+   margin-top: -5%;
+    
+}
+
+.icon-admin{
+    transition: transform 2s ease;
+}
+.icon-admin:hover{
+    transform: scale(1.2,1.2);
+}
+
+/*********************************************************************************registro */
+.form-register{
+    padding: 2%;
+   
+   width:50%;
+}
+.form-register h1{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+/**************************************************************************buscador */
+
+.box-buscador{
+    width: 20%;
+    float: right;
+}
