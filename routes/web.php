@@ -6,6 +6,8 @@ use App\Http\Controllers\RegisterController; //importar la biblioteca
 use App\Http\Controllers\LoginController;//importar la biblioteca
 use App\Http\Controllers\LogoutController;//importar
 use App\Http\Controllers\PanelController;//importar
+use App\Http\Controllers\PlatoController;//importar
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,9 +29,7 @@ Route::get('/Book&Delivery', function () {
     return view('index');
 })->name('index');
 
-Route::get('/carta', function () {
-    return view('modulos.carta');
-})->name('carta');
+Route::get('/carta', [PlatoController::class,'index'])->name('carta');
 
 Route::get('/reserva', function () {
     return view('modulos.reserva');
