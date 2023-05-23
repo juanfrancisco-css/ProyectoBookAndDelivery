@@ -91,7 +91,7 @@ $cont_horas=0;
             
               
                 //si hay mas mesas que reservas (12 mesas)
-                if($row['count(*)'] >=12){
+                if($row['count(*)'] >=5){
 
                     
                     $test4[] = $row['fecha'];
@@ -127,7 +127,7 @@ while($row= $result->fetch_assoc()){
 
 }
 
-$fechaRequerida="21 Mayo 2023";
+//$fechaRequerida="21 Mayo 2023";
 $HoraNoDisponible=array();
 foreach ($test5 as $fecha => $horas){
 
@@ -143,10 +143,44 @@ if($_REQUEST['fecha']==$fecha){
 
 }
 
+//añadido 
+$test=array();
+$cont=0;
+foreach ($test5 as $fecha => $horas){
+
+    if($_REQUEST['fecha']==$fecha){
+       
+        foreach ($horas as $hora) {
+         
+            $sql=" select count(*),hora  from reservas where hora= '". $hora."' ;";
+          // echo $sql."<br>";
+            $result=$con->query($sql);
+            while($row= $result->fetch_assoc()){
+                
+                // echo "reservas el  dia ".$row['fecha'].' numero '.$row['count(*)']." a las " .$row['hora']."<br>" ;
+     
+                 //si hay mas mesas que reservas
+                 if($row['count(*)'] >=5){
+                      $test[]=substr( $row['hora'], 0, -3);
+
+                 }
+                }
+           
+        }
+    }
+
+   
+}
+
+$test6=array_unique($test);
+
+//fin
+
+//en vez de compararlo con $HoraNoDisponible se comparara con $test6
 
 $new=[];
 foreach($horario as $item) {
-if(!in_array($item, $HoraNoDisponible)) {
+if(!in_array($item,$test6 )) {
     $new[] =$item;
 }
 }
