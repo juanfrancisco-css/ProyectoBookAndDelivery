@@ -60,66 +60,18 @@
                     Pide lo que te pida el cuerpo
                     </h1>
                     <p >
-                   
+                   Reserva tu mesa o haz tu pedido y te lo llevamos a casa
                   </p>
-                    <div class="btn-box">
-                      <a href="{{ route('reserva-create')}}" class="btn1">
-                       Hacer Reserva
-                      </a>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item ">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 col-lg-6 ">
-                  <div class="detail-box">
-                    <h1>
-                    Queremos Lo Mejor Para Ti
-                    </h1>
-                   
-                    <div class="btn-box">
-                      <a href="{{ route('carta')}}" class="btn1">
-                      Carta Completa
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 col-lg-6 ">
-                  <div class="detail-box">
-                    <h1>
-                    Vive una experiencia gastronómica inolvidable!
-                    </h1>
-                    <p>
-                   
-                    </p>
-                    <div class="btn-box">
-                      <a href="{{ route('reserva-create')}}" class="btn1">
-                        Reservar tu Mesa
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+         
         </div>
-        <div class="container">
-          <ol class="carousel-indicators">
-            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-            <li data-target="#customCarousel1" data-slide-to="1"></li>
-            <li data-target="#customCarousel1" data-slide-to="2"></li>
-          </ol>
-        </div>
+        
       </div>
 
     </section>
@@ -238,59 +190,46 @@
           </div>
         </div>
        
-
+  
         <div class="col-md-4 footer-col">
           <h4>
            Condiciones Legales
           </h4>
-          <div class="contact_link_box">
-         <p> <a href=""><span>Condiciones de Cookies</span></a></p>
-         <p> <a href=""> <span>Politica de Privacidad</span></a></p>
-          <p><a href="">Aviso Legal</a></p>
-        <p>  <a href="">Declaración de accesibilidad</a></p>
-           </div>
+          <div>
+            <p> <span >Condiciones de Cookies</span></p>
+            <p> <span>Politica de Privacidad</span></p>
+             <p>Aviso Legal</p>
+             <p>Declaración de accesibilidad</p>
+          </div>
         </div>
       </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> Todos los derechos reservados
-         <br><br>
-          &copy; <span id="displayYear"></span> Distribuido por alumnos del Vista Alegre
-         
-        </p>
-      </div>
+      
     </div>
   </footer>
+
+  
   <!-- footer section -->
 
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
-
-    <!-- miApp js -->
-    <script src="js/miApp.js"></script>
-
-    
-<!-- boostrap js -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-   
+ <!-- jQery -->
+ <script src="js/jquery-3.4.1.min.js"></script>
+ <!-- popper js -->
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+ </script>
+ <!-- bootstrap js -->
+ <script src="js/bootstrap.js"></script>
+ <!-- owl slider -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+ </script>
+ <!-- isotope js -->
+ <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+ <!-- nice select -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+ <!-- custom js -->
+ <script src="js/custom.js"></script>
+ <!-- Google Map -->
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+ </script>
+ <!-- End Google Map -->
 </body>
 
 </html>

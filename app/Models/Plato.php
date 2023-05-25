@@ -17,4 +17,13 @@ class Plato extends Model
         'activo',
         'categoría',
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        self::creating(function ($plato) {
+            $plato->foto = $plato->id . '.png';
+        });
+    }
 }

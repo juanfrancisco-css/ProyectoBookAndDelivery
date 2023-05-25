@@ -21,25 +21,27 @@
       <div class="filters-content">
         <div class="row grid">
           @foreach ($platos as $plato)
-          <div class="col-sm-6 col-lg-4 all {{ $plato->categoria }}">
-              <div class="box">
-                  <div>
-                      <div class="img-box">
-                          <img src="images/{{ $plato->foto }}" alt="">
-                      </div>
-                      <div class="detail-box">
-                          <h5>{{ $plato->nombre }}</h5>
-                          <p>{{ $plato->descripcion }}</p>
-                          <div class="options">
-                              <h6>${{ $plato->precio }}</h6>
-                              <a href="">
-                                  <img src="images/carrito.png" width=20>
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+            @if ($plato->activo)
+            <div class="col-sm-6 col-lg-4 all {{ $plato->categoria }}">
+                <div class="box">
+                    <div>
+                        <div class="img-box">
+                            <img src="images/{{ $plato->foto }}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>{{ $plato->nombre }}</h5>
+                            <p>{{ $plato->descripcion }}</p>
+                            <div class="options">
+                                <h6>€{{ $plato->precio }}</h6>
+                                <a href="">
+                                    <img src="images/carrito.png" width=20>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
           @endforeach
 
         </div>
