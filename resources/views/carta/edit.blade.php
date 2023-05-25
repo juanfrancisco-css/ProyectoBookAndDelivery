@@ -54,9 +54,7 @@
         <label for="foto">Foto:</label>
         <input type="file" class="form-control" id="foto" name="foto" accept=".png">
     </div>
-    <div>
-        <img src="images/{{ $plato->foto }}" alt="Imagen del plato">
-    </div>
+    
     <div>
         <input type="checkbox" id="activo" name="activo" {{ old('activo', $plato->activo) ? 'checked' : '' }}>
         <label for="activo">Activo</label>
@@ -69,10 +67,15 @@
         <button type="submit" class="btn btn-primary">Actualizar Plato</button>
     </div>
 </form>
+    
 
 
           </div>
         </div>
+        <div class="col-md-6">
+            <div style="float: right, text-align: left">
+                <img src="../images/{{ $plato->foto }}" alt="Imagen del plato" width=300>
+            </div></div>
         
       </div>
     </div>
