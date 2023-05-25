@@ -14,7 +14,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
   <title>BookAndDelivery</title>
-
+  <!-- estilos del  calendario-->
+ <link href="{{ asset('css/calendario.css') }}" rel="stylesheet">
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -36,6 +37,8 @@
   
 <!-- boostrap icon -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
 
 </head>
 
@@ -125,6 +128,10 @@
     
   </div>
 </footer>
+
+<!-- calendario javascript-->
+<script src="js/calendario.js"></script>
+
 <!-- jQery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 <!-- popper js -->
@@ -146,4 +153,5 @@
 </script>
 <!-- End Google Map -->
    
+
 </body>
