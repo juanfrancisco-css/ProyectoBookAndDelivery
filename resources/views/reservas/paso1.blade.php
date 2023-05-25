@@ -71,9 +71,10 @@
                       </tr>
                       <tr>
                       <td>
-   <div class="map_container container-calendar" style=" margin-top:-10%;">
-<div class="calendar"  style="transform: scale(0.9,0.9);"></div>
-    </div>
+                        <!--
+   <div class="map_container container-calendar"></div>
+                    -->
+    <div class="calendar"  style="transform: scale(0.7,0.7);"></div>
  
                       </td>
                       </tr>

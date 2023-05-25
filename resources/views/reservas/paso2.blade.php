@@ -187,7 +187,7 @@ if(!in_array($item,$test6 )) {
 $horario=$new;
 
 //print_r($horario);
-echo "<div class='box-fecha'>";
+echo "<div class='' style='width:30%;'>";
 $cont=0;
 for($i=0;$i<count($horario);$i++){
 $id='hora_'.$i;
