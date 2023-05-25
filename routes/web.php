@@ -46,7 +46,7 @@ Route::get('/Contactanos', function () {
 
 
 /*****************************************************************************************************reservas */
-Route::get('reserva_index',[ReservaController::class,'index'])->name('reserva-index');
+Route::get('listado reservas',[ReservaController::class,'index'])->name('reserva-index');
 Route::get('reservas',[ReservaController::class,'create'])->name('reserva-create');
 Route::post('reserva_store',[ReservaController::class,'store'])->name('reserva-store');
 Route::get('/reservas_update/{id}', [ReservaController::class,'edit'])->name('reserva-edit');
