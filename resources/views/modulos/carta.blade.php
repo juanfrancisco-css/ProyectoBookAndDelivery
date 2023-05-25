@@ -26,7 +26,7 @@
                 <div class="box">
                     <div>
                         <div class="img-box">
-                            <img src="images/{{ $plato->foto }}" alt="">
+                            <img src="images/{{ $plato->id }}.png" alt="">
                         </div>
                         <div class="detail-box">
                             <h5>{{ $plato->nombre }}</h5>
