@@ -1,5 +1,5 @@
  
- @extends('plantillabase')
+ @extends('admin.plantillabase2')
  @section('content')
 <!-- book section -->
 <section class="book_section layout_padding">
@@ -161,7 +161,7 @@ for($i=0;$i<count($hora);$i++){
 
 
               <div class="btn_box">
-                <button type="submit" >Reservar </button>
+                <button type="submit" class="btn btn-primary">Reservar </button>
                
               </div>
             </form>

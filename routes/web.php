@@ -29,7 +29,7 @@ Route::get('/Book&Delivery', function () {
     return view('index');
 })->name('index');
 
-Route::get('/carta', [PlatoController::class,'index'])->name('carta');
+Route::get('/carta', [PlatoController::class,'vista'])->name('carta');
 
 Route::get('/reserva', function () {
     return view('modulos.reserva');
@@ -62,9 +62,13 @@ Route::post('modificarHora',[ReservaController::class,'modificarHora'])->name('m
 
 Route::post('reservas-paso5',[ReservaController::class,'paso5'])->name('reserva-paso5');
 
-
-
-
+/*****************************************************************************************************carta */
+Route::get('carta_index',[PlatoController::class,'index'])->name('carta-index');
+Route::get('/carta_update/{id}', [PlatoController::class,'edit'])->name('carta-edit');
+Route::get('carta/create',[PlatoController::class,'create'])->name('carta-create');
+Route::post('carta_store',[PlatoController::class,'store'])->name('carta-store');
+Route::delete('/carta_update/{id}', [PlatoController::class,'destroy'])->name('carta-destroy');
+Route::put('/carta_update/{id}', [PlatoController::class,'update'])->name('carta-update');
 /*****************************************************************************************************admin */
 
 
