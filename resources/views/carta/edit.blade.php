@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-6">
             <div style="float: right, text-align: left">
-                <img src="../images/{{ $plato->foto }}" alt="Imagen del plato" width=300>
+                <img src="../images/{{ $plato->id }}.png" alt="Imagen del plato" width=300>
             </div></div>
         
       </div>
