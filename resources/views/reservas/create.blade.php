@@ -161,7 +161,7 @@ for($i=0;$i<count($hora);$i++){
 
 
               <div class="btn_box">
-                <button type="submit" class="btn btn-primary">Reservar </button>
+                <button type="submit" class="btn btn-success">Reservar </button>
                
               </div>
             </form>

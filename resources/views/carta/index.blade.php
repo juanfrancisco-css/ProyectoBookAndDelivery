@@ -13,7 +13,7 @@
     @endif
 
     <div class="alert alert-info" role="alert">
-<i class="bi bi-info-circle"></i> Aqui podrás gestionar la carta  como activar o desactivar los platos que deseas visualizar.
+<i class="bi bi-info-circle"></i> Aqui podrás dar de alta o de baja tus platos además de modificar su reseña.
 </div>
 <a href="{{ route('carta-create') }}" class="btn btn-primary mt-4"><i class="bi bi-plus-circle-fill"></i> Crear Plato </a>
 
@@ -50,7 +50,7 @@
       @csrf
       @method('DELETE')
              
-              <button class="btn btn-danger">Borrar</button>
+              <button class="btn btn-danger" disabled>Borrar</button>
       </form> 
     
     </td>

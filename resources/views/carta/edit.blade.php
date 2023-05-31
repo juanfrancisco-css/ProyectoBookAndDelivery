@@ -9,7 +9,7 @@
 
     <!-- Si el usuario esta autenticado -->
       @auth
-        <a class="btn btn-secondary" href="{{ route('reserva-index') }} "><i class="bi bi-info-circle"></i></a>  
+        <a class="btn btn-secondary" href="{{ route('carta-index') }}"><i class="bi bi-info-circle"></i></a>  
        @endauth
     <!-- fin -->
         <h1 >Modifica el plato</h1>
