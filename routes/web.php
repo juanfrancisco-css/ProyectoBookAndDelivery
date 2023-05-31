@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;//importar la biblioteca
 use App\Http\Controllers\LogoutController;//importar
 use App\Http\Controllers\PanelController;//importar
 use App\Http\Controllers\PlatoController;//importar
+use App\Http\Controllers\ContactoController; //importar
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,14 @@ Route::get('/SobreNosotros', function () {
 Route::get('/Contactanos', function () {
     return view('modulos.contacto');
 })->name('contacto');
+
+/**********************************************************************************************contacto */
+Route::get('contacto_index',[ContactoController::class,'index'])->name('contacto-index');
+Route::get('contacto_create',[ContactoController::class,'create'])->name('contacto-create');
+Route::post('contacto_store',[ContactoController::class,'store'])->name('contacto-store');
+Route::get('/contacto_update/{id}', [ContactoController::class,'edit'])->name('contacto-edit');
+Route::put('/contacto_update/{id}', [ContactoController::class,'update'])->name('contacto-update');
+Route::delete('/contacto_borrar/{id}', [ContactoController::class,'destroy'])->name('contacto-destroy');
 
 
 

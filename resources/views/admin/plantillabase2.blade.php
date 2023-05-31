@@ -223,7 +223,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="{{ route('contacto-index') }}" class="nav-link text-white">
             <i class="bi bi-chat-left-text"></i>
          Servicio al Cliente
         </a>
