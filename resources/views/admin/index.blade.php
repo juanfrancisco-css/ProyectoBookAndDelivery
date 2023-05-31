@@ -38,6 +38,7 @@
             <p class="text-body-secondary">¡Échale una ojeada a tu tienda!  .</p>
           </div>
 
+          <!--
           <div class="col d-flex flex-column gap-2">
             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center ">
                 <a href="{{ route('registrarse')}}" class="btn btn-outline-secondary col-12"><i class="bi bi-person-add"></i></a>
@@ -45,7 +46,15 @@
             <h4 class="fw-semibold mb-0">Crear Usuarios con Privilegios</h4>
             <p class="text-body-secondary">Te ayudarán a gestionar las reservas y los mensajes.</p>
           </div>
-          
+          -->
+
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center ">
+                <a href="{{ route('carta-index') }}" class="btn btn-outline-secondary col-12"><i class="bi bi-shop-window"></i></a>
+            </div>
+            <h4 class="fw-semibold mb-0">Gestionar la Carta</h4>
+            <p class="text-body-secondary">Activa tus platos para que los clientes puedan verlos. También puedes modificar sus descripciones.</p>
+          </div>
         </div>
       </div>
     </div>

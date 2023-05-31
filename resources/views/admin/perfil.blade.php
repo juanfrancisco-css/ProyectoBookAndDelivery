@@ -5,7 +5,7 @@
 
  <div class="page-index">
 
- <div class="alert alert-secondary" role="alert">
+ <div class="alert alert-info" role="alert">
  <i class="bi bi-info-circle"></i> Por motivo de seguridad no se pueden modificar los datos
 </div>
  <h1>Perfil <img  src="{{ asset('images/usuario.png')}}" width=50> </h1>

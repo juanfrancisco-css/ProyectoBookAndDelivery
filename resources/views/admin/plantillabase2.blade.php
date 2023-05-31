@@ -9,6 +9,7 @@
     <meta name="generator" content="Hugo 0.111.3">
     <title>Book&Delivery</title>
 
+    <link rel="shortcut icon" href="images/favicon.png" type="">
      <!-- estilos del  calendario-->
  <link href="{{ asset('css/calendario.css') }}" rel="stylesheet">
  
@@ -204,7 +205,8 @@
       </li>
       <li>
         <a href="{{ route('carta-index') }}" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+         <!-- <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>-->
+         <i class="bi bi-shop-window"></i>  
           Carta
         </a>
       </li>
@@ -228,7 +230,8 @@
       </li>
     </ul>
     <hr>
-    <a href="{{ route('logout') }}"> <i class="bi bi-box-arrow-left"></i></a>
+   
+    <a href="{{ route('logout') }}" class="btn btn-danger"> Salir </a>
     <!-- Menu desplegable-
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

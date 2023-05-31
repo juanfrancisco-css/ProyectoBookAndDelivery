@@ -12,8 +12,8 @@
     <h6 class="alert alert-success">{{session('success')}}</h6>
     @endif
 
-    <div class="alert alert-secondary" role="alert">
-<i class="bi bi-info-circle"></i> Aqui podrás gestionar tus reservas   
+    <div class="alert alert-info" role="alert">
+<i class="bi bi-info-circle"></i> Aqui podrás  modificar los datos o anular una reserva . 
 </div>
 <a href="{{ route('reserva-create') }}" class="btn btn-primary mt-4"><i class="bi bi-plus-circle-fill"></i> Crear Reserva </a>
 

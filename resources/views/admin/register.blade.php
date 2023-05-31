@@ -6,11 +6,11 @@
 <form action="{{ route('registrarse') }}" method="POST">
   @csrf  <!-- Token es necesario -->
 
-<h1>Crear Usuario</h1>
-<div class="alert alert-secondary" role="alert">
-<i class="bi bi-info-circle"></i> Aqui podrás crear usuarios con privilegios que te ayudarán a gestionar las reservas   
+
+<div class="alert alert-info" role="alert">
+<i class="bi bi-info-circle"></i> Aqui podrás crear usuarios con privilegios que te ayudarán a gestionar las reservas y la carta.   
 </div>
-        
+<h1>Formulario de Altas</h1>      
 @if (session('success'))
     <h6 class="alert alert-success">{{session('success')}}</h6>
 @endif
