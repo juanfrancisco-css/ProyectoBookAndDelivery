@@ -36,6 +36,116 @@
   <!-- boostrap icon-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  
+  <style>
+/*Primer hijo de la tabla  */
+ table tr td:first-child{
+    background-image: url("images/use.png"); /* The image used */
+  background-color: #f1eded; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+table tr td:nth-child(2){
+   /* background-image: url("pizz.jpg"); /* The image used */
+  background-color: #fafafa; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+table tr td:nth-child(3){
+    background-image: url("images/use2.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+table tr td:nth-child(4){
+    background-image: url(""); /* The image used */
+  background-color: #ffffff; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+table tr:nth-child(2) td:first-child{
+    background-image: url(""); /* The image used */
+  background-color: #ffffff; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+table tr:nth-child(2) td:first-child a{
+    color:rgb(20, 20, 19);
+    font-weight: lighter;
+    font-style: italic;
+}
+
+table tr:nth-child(2) td:nth-child(2){
+    background-image: url("images/use3.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+table tr:nth-child(2) td:nth-child(3){
+    background-image: url(""); /* The image used */
+  background-color: #ffffff; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+ 
+}
+table tr:nth-child(2) td:nth-child(3) a{
+    color:rgb(20, 20, 19);
+    font-weight: lighter;
+    font-style: italic;
+}
+table tr:nth-child(2) td:nth-child(4){
+    background-image: url(""); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 379px; /* You must set a specified height */
+  width: 379px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+table a{
+    color:black;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+table{
+   
+  padding: 10px;
+  box-shadow: 3px 10px 10px #888888;
+  margin-left:14%;
+  margin-bottom:3%;
+}
+ 
+  </style>
 </head>
 
 <body onload="cargar()">
@@ -91,46 +201,38 @@
 
 
 <!-- section content2 -->
-<div class="container text-center content2">
-  <div class="row">
-    <div class="col">
-   <img src="images/dia-hamburguesa-t.jpg" width=600 class="img-fond" >
-   <img src="images/dia-hamburguesa-t.jpg" width=450  class="img-pos">
-    </div>
-    <div class="col">
-    <h1>
-    Hacer Reserva
-   </h1>
-   <p>Ya sea para comer, planear una reunión o evento con tu familia, compañeros de trabajo o aquedar con los amigos(as)…</p>
-
-   <a href="{{ route('reserva-create')}}" class="btn btn-reservation"><i class="bi bi-chevron-compact-right"></i> Hacer Reserva</a>
-    </div>
-  </div>
-</div>
-
-
-<div class="container text-center content3">
-  <div class="row">
-    <div class="col">
-    <h1>
-   La Carta
-   </h1>
-   <p>
-   Revoluciona la manera en que disfrutamos de nuestras comidas favoritas
-   </p>
-
-   <a href="{{ route('carta') }}" class="btn btn-reservation"><i class="bi bi-chevron-compact-right"></i> Ver la Carta</a>
-   
-    </div>
-    <div class="col">
-   
-   <img src="images/pizz.jpg" width=400 class="img-fond" >
-   <img src="images/pizz.jpg" width=350  class="img-pos">
-  
-  </div>
-  </div>
-</div>
-
+<table>
+        <tr>
+            <td class="rounded text-center" >
+               <!---<a href="#" > Satisfacción garantizada en cada bocado</a>-->
+               
+            </td>
+            <td class="rounded text-center">
+                <a href="#" >  Satisfacción garantizada en cada bocado</a>
+<br>
+                <a  href=" {{ route('carta') }} " class="btn btn-outline-warning col-6 mt-3">Ver la Carta</a>
+            </td>
+            <td class="rounded text-center">
+              <!--- <a href="">Descubre el equilibrio perfecto entre sabor y salud en nuestras ensaladas</a>-->
+            </td>
+           <!--- <td class="rounded"> </td>-->
+        </tr>
+        <tr>
+            <td class="rounded text-center">
+                <a href="">Encuentra el lugar perfecto para disfrutar con tus amigos en nuestro establecimiento</a>
+                <br>
+                <a href="{{ route('reserva-paso1')}}" class="btn btn-warning col-6 mt-4">Reservar</a>
+            </td>
+            <td class="rounded text-center">
+               <!--- <a href="#" >Sabores auténticos que te harán regresar por más</a>-->
+            </td>
+            <td class="rounded text-center">
+                <a href="">Tu opinión nos importa. Contáctanos y cuéntanos cómo podemos ayudarte.</a>
+                <a href="{{ route('contacto-create')}}" class="btn btn-warning col-6 mt-4">Contáctanos</a>
+            </td>
+              <!--- <td class="rounded"> </td>-->
+        </tr>
+    </table>
 <!-- fin --->
 
   <!-- footer section -->
