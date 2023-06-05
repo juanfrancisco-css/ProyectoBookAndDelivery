@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Plato;
 
@@ -17,67 +16,64 @@ class PlatosSeeder extends Seeder
     {
         $platos = [
             [
-                'nombre' => 'Pizza 4 quesos',
-                'descripcion' => 'Deliciosa pizza con 4 tipos de quesos',
-                'precio' => rand(5, 10),
-                'categoria' => 'pizzas',
-
-            ],
-            [
-                'nombre' => 'Hamburguesa clásica',
-                'descripcion' => 'Sabrosa hamburguesa clásica con carne jugosa',
-                'precio' => rand(5, 10),
-                'categoria' => 'hamburguesas',
-
-            ],
-            [
-                'nombre' => 'Pizza campesina',
-                'descripcion' => 'Pizza rústica con ingredientes frescos de la granja',
-                'precio' => rand(5, 10),
-                'categoria' => 'pizzas',
-  
-            ],
-            [
-                'nombre' => 'Ensalada de Pasta',
-                'descripcion' => 'Refrescante ensalada de pasta con vegetales',
+                'nombre' => 'Pasta carbonara',
+                'descripcion' => 'Clásico plato de pasta con salsa carbonara, panceta y queso',
                 'precio' => rand(5, 10),
                 'categoria' => 'pastas',
-
-            ],
-            [
-                'nombre' => 'Patatas fritas',
-                'descripcion' => 'Crujientes patatas fritas caseras',
-                'precio' => rand(5, 10),
-                'categoria' => 'entrantes',
-
-            ],
-            [
-                'nombre' => 'Pizza 4 estaciones',
-                'descripcion' => 'Pizza variada con ingredientes de las 4 estaciones',
-                'precio' => rand(5, 10),
-                'categoria' => 'pizzas',
-
-            ],
-            [
-                'nombre' => 'Hamburguesa vegana',
-                'descripcion' => 'Hamburguesa vegetariana con sabores únicos',
-                'precio' => rand(5, 10),
-                'categoria' => 'hamburguesas',
-
-            ],
-            [
-                'nombre' => 'Hamburguesa de pollo',
-                'descripcion' => 'Jugosa hamburguesa de pollo a la parrilla',
-                'precio' => rand(5, 10),
-                'categoria' => 'hamburguesas',
-
             ],
             [
                 'nombre' => 'Pasta boloñesa',
                 'descripcion' => 'Clásico plato de pasta con salsa boloñesa',
                 'precio' => rand(5, 10),
                 'categoria' => 'pastas',
- 
+            ],
+            [
+                'nombre' => 'Ensalada Caprese',
+                'descripcion' => 'Ensalada fresca con tomate, mozzarella y albahaca',
+                'precio' => rand(5, 10),
+                'categoria' => 'ensaladas',
+            ],
+            [
+                'nombre' => 'Pizza Margarita',
+                'descripcion' => 'Pizza tradicional con salsa de tomate, mozzarella y albahaca',
+                'precio' => rand(5, 10),
+                'categoria' => 'pizzas',
+            ],
+            [
+                'nombre' => 'Lasaña',
+                'descripcion' => 'Deliciosa lasaña de carne o vegetales con capas de pasta y salsa',
+                'precio' => rand(5, 10),
+                'categoria' => 'pastas',
+            ],
+            [
+                'nombre' => 'Tiramisú',
+                'descripcion' => 'Postre italiano de capas de bizcocho empapado en café y crema de mascarpone',
+                'precio' => rand(5, 10),
+                'categoria' => 'postres',
+            ],
+            [
+                'nombre' => 'Risoto',
+                'descripcion' => 'Plato de arroz cremoso con ingredientes como champiñones, mariscos o vegetales',
+                'precio' => rand(5, 10),
+                'categoria' => 'arroz',
+            ],
+            [
+                'nombre' => 'Ravioli',
+                'descripcion' => 'Pasta rellena con diversos ingredientes, servida con salsa',
+                'precio' => rand(5, 10),
+                'categoria' => 'pastas',
+            ],
+            [
+                'nombre' => 'Calzone',
+                'descripcion' => 'Pizza cerrada en forma de empanada rellena de ingredientes variados',
+                'precio' => rand(5, 10),
+                'categoria' => 'pizzas',
+            ],
+            [
+                'nombre' => 'Pasta al pesto',
+                'descripcion' => 'Pasta con salsa de pesto, hecha con albahaca, piñones, queso y aceite de oliva',
+                'precio' => rand(5, 10),
+                'categoria' => 'pastas',
             ],
         ];
 
