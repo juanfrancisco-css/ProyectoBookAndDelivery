@@ -33,9 +33,14 @@
                             <p>{{ $plato->descripcion }}</p>
                             <div class="options">
                                 <h6>€{{ $plato->precio }}</h6>
-                                <a href="">
+                                <form action="{{ route('pedido-add-plato') }}" method="POST">
+                                  @csrf
+                                  <input type="hidden" name="plato_id" value="{{ $plato->id }}">
+                                  <button type="submit" class="carrito">
                                     <img src="images/carrito.png" width=20>
-                                </a>
+                              </button>
+                              </form>
+                                
                             </div>
                         </div>
                     </div>

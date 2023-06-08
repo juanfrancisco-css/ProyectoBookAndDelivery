@@ -8,6 +8,7 @@ use App\Http\Controllers\LogoutController;//importar
 use App\Http\Controllers\PanelController;//importar
 use App\Http\Controllers\PlatoController;//importar
 use App\Http\Controllers\ContactoController; //importar
+use App\Http\Controllers\PedidoController; //importar
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,16 @@ Route::get('carta/create',[PlatoController::class,'create'])->name('carta-create
 Route::post('carta_store',[PlatoController::class,'store'])->name('carta-store');
 Route::delete('/carta_update/{id}', [PlatoController::class,'destroy'])->name('carta-destroy');
 Route::put('/carta_update/{id}', [PlatoController::class,'update'])->name('carta-update');
+
+/*****************************************************************************************************pedidos */
+Route::get('pedido_index',[PedidoController::class,'index'])->name('pedido-index');
+Route::post('pedido_add_plato',[PedidoController::class,'add'])->name('pedido-add-plato');
+Route::post('pedido_remove_plato',[PedidoController::class,'remove'])->name('pedido-remove-plato');
+Route::post('pedido_increment_plato',[PedidoController::class,'increment'])->name('pedido-increment-plato');
+Route::post('pedido_decrement_plato',[PedidoController::class,'decrement'])->name('pedido-decrement-plato');
+Route::get('pedido_datos',function (){return view('modulos.pedido2');})->name('pedido-datos');
+Route::post('pedido_confirmacion',[PedidoController::class,'store'])->name('pedido-confirmacion');
+
 /*****************************************************************************************************admin */
 
 

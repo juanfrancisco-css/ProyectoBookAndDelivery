@@ -28,7 +28,9 @@
                 <!--<a class="nav-link" href="{{ route('contacto')}} ">Contáctanos</a>-->
                 <a class="nav-link" href="{{ route('contacto-create') }}">Contáctanos</a>
               </li>
-             
+              <li class="nav-item ">
+                <a class="nav-link" href="{{ route('pedido-index') }}"><img src="images/carrito.png" width=20></a>
+              </li>
              
              
             </ul>
