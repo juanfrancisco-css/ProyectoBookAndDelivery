@@ -10,6 +10,7 @@ class Pedido extends Model
         'nombre',
         'correo',
         'direccion',
+        'telefono',
         'platos',
         'importe',
         'enviado',

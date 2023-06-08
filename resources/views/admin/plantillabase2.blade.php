@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head></script>
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -204,9 +204,15 @@
         </a>
       </li>
       <li>
+        <a href="{{ route('pedidos-admin-index') }}" class="nav-link text-white">
+            <i class="bi bi-card-checklist">  </i>
+         Pedidos
+        </a>
+      </li>
+      <li>
         <a href="{{ route('carta-index') }}" class="nav-link text-white">
-         <!-- <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>-->
-         <i class="bi bi-shop-window"></i>  
+         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+
           Carta
         </a>
       </li>

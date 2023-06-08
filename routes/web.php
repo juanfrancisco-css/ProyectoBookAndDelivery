@@ -89,6 +89,9 @@ Route::post('pedido_decrement_plato',[PedidoController::class,'decrement'])->nam
 Route::get('pedido_datos',function (){return view('modulos.pedido2');})->name('pedido-datos');
 Route::post('pedido_confirmacion',[PedidoController::class,'store'])->name('pedido-confirmacion');
 
+/*****************************************************************************************************pedidos admin*/
+Route::get('pedidos_admin_index',[PedidoController::class,'admin_index'])->name('pedidos-admin-index');
+Route::get('/pedido_admin/{id}', [PedidoController::class,'admin_show_order'])->name('pedido-admin-mostrar');
 /*****************************************************************************************************admin */
 
 

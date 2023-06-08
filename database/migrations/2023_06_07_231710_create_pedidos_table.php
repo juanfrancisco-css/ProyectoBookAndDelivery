@@ -17,7 +17,8 @@ class CreatePedidosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('correo');
-            $table->string('direccion');
+            $table->string('telefono');
+            $table->string('direccion');            
             $table->json('platos');
             $table->decimal('importe', 8, 2);
             $table->boolean('enviado')->default(false);

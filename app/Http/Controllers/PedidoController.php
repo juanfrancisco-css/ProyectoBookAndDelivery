@@ -17,6 +17,21 @@ class PedidoController extends Controller
     {
         return view('modulos.pedido1');
     }
+    /**
+     * Display a listing of the resource.
+     */
+    public function admin_index()
+    {
+        $pedidos = Pedido::all();
+        return view('pedidos.index', compact('pedidos'));
+
+    }
+    public function admin_show_order($id){
+    
+        $pedido = Pedido:: find($id); 
+
+        return view('pedidos.pedido',['pedido'=>$pedido]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -140,11 +155,12 @@ class PedidoController extends Controller
         }
         
 
-        // Convertir array platos - cantidad a array id - cantidad
+        // Convertir array id-platos/cantidad a array id-cantidad
         foreach ($platos as $plato) {
             $platos_id_cantidad[$plato['plato']->id]=$plato['cantidad'];
         }
 
+        // Convertir a json el array anterior para guardar en la tabla
         $platos_json=json_encode($platos_id_cantidad);      
 
         // Crear un nuevo objeto Pedido con los datos del formulario y los platos
