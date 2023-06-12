@@ -112,11 +112,7 @@
                 <div class="box2">
                     <p>Si tienes alguna pregunta o algún comentario sobre el servicio o el pago, ponte en contacto con
                         <a href="{{ route('index')}}">Book&Delivery</a>.</p>
-                    <p>Si tienes alguna pregunta o algún comentario sobre la experiencia de reserva, ponte en contacto con
-                        Reserva con Google.</p>
-                    <p>Te hemos enviado este correo electrónico obligatorio porque estás utilizando Reserva con Google.</p>
-                    <p>© 2020 Google LLC.</p>
-                    <p>Google LLC. 1600 Amphitheatre Parkway, Mountain View, CA 94043, Estados Unidos.</p>
+               
                 </div>
             </div>
         </div>
