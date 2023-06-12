@@ -17,8 +17,7 @@ class ReservaController extends Controller
     {
 
         if(Auth::check()){
-     // $reservas = reserva:: all(); //nos traera todo los registros
-     $reservas = reserva:: paginate(5);
+     $reservas = reserva:: all();
         return view('reservas.index')->with('reservas',$reservas); //enviarle la variable a la vista 
         }
     else
