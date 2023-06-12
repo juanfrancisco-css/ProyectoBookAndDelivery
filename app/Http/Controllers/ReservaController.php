@@ -160,7 +160,7 @@ class ReservaController extends Controller
             // Enviar el correo electrónico de confirmación
             Mail::to($reserva->email)->send(new ReservaEmail($reserva));
     
-            return redirect ()->route('reserva-paso1')->with('success','Te hemos enviado un correo electronico con los detalles  de la reservas y un botón para confirmarla'  );
+            return redirect ()->route('reserva-paso1')->with('success','Te hemos enviado un correo electronico con los detalles  de la reserva y un botón para confirmarla'  );
    
         } else {
             return redirect ()->route('reserva-paso1')->withErrors('Ups lo sentims pero en este momento no podemos gestionar tu reserva <br>Para mas infomación pongase en contacto con nosotros');

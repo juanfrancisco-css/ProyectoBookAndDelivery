@@ -35,7 +35,7 @@
 </head>
   <body class="container p-2">
     <section>
-  <h1>Tu reserva en Book&Delivery esta confirmada </h1>
+  <h1>Tu reserva en Book&Delivery</h1>
   <div class="box">
 <h3>Detalles de la Reserva</h3>
 <div class="container text-center">
@@ -47,7 +47,7 @@
   </td>
     <td>
     <p><i class="bi bi-people-fill"></i> Personas : 
-    <span class="content">{{ $reserva->comensales }}</span></p> 
+    <span class="content">{{ $reserva->NumPersonas }}</span></p> 
   </td>
   </tr>
 
