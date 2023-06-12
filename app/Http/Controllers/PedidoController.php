@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Pedido;
 use App\Models\Plato;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Mail\PedidoRealizadoEmail;
+use App\Mail\PedidoEnviadoEmail;
 use Session;
 
 
@@ -180,8 +183,14 @@ class PedidoController extends Controller
         // Limpiar la variable de sesión del carrito
         Session::forget('cart');
 
+        //enviar email
+
+        $user = ['name' =>  $pedido->nombre, 'email' =>  $pedido->correo];
+        Mail::to($user['email'])->send(new PedidoRealizadoEmail($pedido));
+
         // Redireccionar a la vista de confirmación de pedido
-        //return redirect()->route('pedido.confirmacion', ['pedido' => $pedido]);
+        
+        return redirect()->route('pedido-datos')->with('success', 'Pedido realizado. Recibirás un email con los detalles y otro cuando lo hayamos enviado');
     }
     
 
@@ -196,9 +205,21 @@ class PedidoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pedido $pedido)
+    public function marcar_enviado($id)
     {
-        //
+
+        $pedido = Pedido::find($id);
+
+        $pedido->enviado=true;
+
+        $pedido->save();
+        
+        //enviar email
+
+        $user = ['name' =>  $pedido->nombre, 'email' =>  $pedido->correo];
+        Mail::to($user['email'])->send(new PedidoEnviadoEmail($pedido));
+
+        return redirect()->back()->with('success', 'Pedido marcado como enviado.');
     }
 
     /**

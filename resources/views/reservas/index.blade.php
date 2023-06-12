@@ -1,4 +1,3 @@
-
 @extends('admin.plantillabase2')
 @section('css')
 <link  href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
@@ -13,7 +12,7 @@
     @endif
 
     <div class="alert alert-info" role="alert">
-<i class="bi bi-info-circle"></i> Aqui podrás  modificar los datos o anular una reserva . 
+<i class="bi bi-info-circle"></i> Aquí podrás modificar los datos o anular una reserva. 
 </div>
 <a href="{{ route('reserva-create') }}" class="btn btn-primary mt-4"><i class="bi bi-plus-circle-fill"></i> Crear Reserva </a>
 
@@ -33,6 +32,7 @@
   </thead>
   <tbody>
     @foreach ($reservas as $reserva )
+    @if ($reserva->confirmada)
     <tr>
       
       <td>{{  $reserva->nombre }}</td>
@@ -53,7 +53,8 @@
       </form> 
     
     </td>
-    </tr>  
+    </tr>
+    @endif
     @endforeach
 </tbody> 
 </table>

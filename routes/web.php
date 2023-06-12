@@ -72,6 +72,10 @@ Route::post('modificarHora',[ReservaController::class,'modificarHora'])->name('m
 
 Route::post('reservas-paso5',[ReservaController::class,'paso5'])->name('reserva-paso5');
 
+Route::get('/reservas/confirmar')->name('reserva-confirmar');
+Route::get('/reservas/confirmar/{token}', [ReservaController::class,'confirmar'])->name('reserva-confirmar-token');
+
+
 /*****************************************************************************************************carta */
 Route::get('carta_index',[PlatoController::class,'index'])->name('carta-index');
 Route::get('/carta_update/{id}', [PlatoController::class,'edit'])->name('carta-edit');
@@ -92,6 +96,7 @@ Route::post('pedido_confirmacion',[PedidoController::class,'store'])->name('pedi
 /*****************************************************************************************************pedidos admin*/
 Route::get('pedidos_admin_index',[PedidoController::class,'admin_index'])->name('pedidos-admin-index');
 Route::get('/pedido_admin/{id}', [PedidoController::class,'admin_show_order'])->name('pedido-admin-mostrar');
+Route::post('/pedido_admin_enviar/{id}', [PedidoController::class,'marcar_enviado'])->name('pedido-admin-enviar');
 /*****************************************************************************************************admin */
 
 

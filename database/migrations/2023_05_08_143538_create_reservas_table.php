@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('fecha');
             $table->timeTz('hora');
             $table->timestamps();
+            $table->string('token');
+            $table->boolean('confirmada')->default(false);
         });
     }
 

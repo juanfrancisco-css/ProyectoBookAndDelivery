@@ -6,6 +6,21 @@
         <div class="heading_container heading_center">
             <h2>Datos del pedido</h2>
         </div>
+        <!-- mensajes de exitos o de error-->       
+        @if (session('success'))
+        <h6 class="alert alert-success">{{session('success')}}</h6>
+        @endif
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <p>Por favor, corrige los siguientes errores:</p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
         <div class="checkout">
             <form action="{{ route('pedido-confirmacion') }}" method="POST">

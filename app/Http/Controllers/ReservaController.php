@@ -7,6 +7,7 @@ use App\Models\reserva; //importar
 use Illuminate\Support\Facades\Auth; //importar una libreria para autenticaciones 
 use Illuminate\Support\Facades\Mail; //importar
 use App\Mail\ReservaEmail; //importar 
+use Illuminate\Support\Str;
 
 class ReservaController extends Controller
 {
@@ -56,6 +57,8 @@ class ReservaController extends Controller
         $reserva->NumPersonas = $request->NumPersonas;
         $reserva->fecha = $request->fecha;
         $reserva->hora = $request->hora;
+        $reserva->confirmada = true;
+        $reserva->token = Str::random(32);
         $reserva->save();
 
         /**************************agregado */
@@ -149,6 +152,8 @@ class ReservaController extends Controller
         $reserva->NumPersonas = $request->NumPersonas;
         $reserva->fecha = $request->fecha;
         $reserva->hora = $request->hora;
+        $reserva->confirmada = false;
+        $reserva->token = Str::random(32);
         $reserva->save();
 
         /**************************agregado */
@@ -156,7 +161,7 @@ class ReservaController extends Controller
             // Enviar el correo electrónico de confirmación
             Mail::to($reserva->email)->send(new ReservaEmail($reserva));
     
-            return redirect ()->route('reserva-paso1')->with('success','Te hemos enviado un correo electronico con los detalles  de la reservas'  );
+            return redirect ()->route('reserva-paso1')->with('success','Te hemos enviado un correo electronico con los detalles  de la reservas y un botón para confirmarla'  );
    
         } else {
             return redirect ()->route('reserva-paso1')->withErrors('Ups lo sentims pero en este momento no podemos gestionar tu reserva <br>Para mas infomación pongase en contacto con nosotros');
@@ -203,6 +208,19 @@ class ReservaController extends Controller
 
         return redirect()->route('reserva-index')->with('success','La reserva de ' .  $reserva->nombre .' ha sido eliminada');
     
+    }
+
+    public function confirmar($token)
+    {
+        $reserva = Reserva::where('token', $token)->first();
+
+        if ($reserva) {
+            $reserva->confirmada = true;
+            $reserva->save();
+
+            
+        }
+        return redirect ()->route('reserva-paso1')->with('success','Reserva confirmada'  );
     }
     
 }

@@ -10,7 +10,7 @@
             @endauth
             <!-- fin -->
             <h1>Detalles del Pedido</h1>
-            <p><span>Book&Delivery (Madrid)</span></p>
+            <p><span>Book&Delivery</span></p>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -34,7 +34,8 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Platos</th><th>Cantidad</th>
+                                <th>Platos</th>
+                                <th>Cantidad</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,35 +63,38 @@
                                 <td colspan="2">No se encontraron platos</td>
                             </tr>
                             @endforelse
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Datos del Cliente</th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td><strong>Nombre:</strong></td>
-                                <td>{{ $pedido->nombre }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Email:</strong></td>
-                                <td>{{ $pedido->correo }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Teléfono:</strong></td>
-                                <td>{{ $pedido->telefono }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Dirección:</strong></td>
-                                <td>{{ $pedido->direccion }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Importe Total:</strong></td>
-                                <td>{{ $totalImporte }} €</td>
-                            </tr>
                         </tbody>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Datos del Cliente</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><strong>Nombre:</strong></td>
+                            <td>{{ $pedido->nombre }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td>{{ $pedido->correo }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teléfono:</strong></td>
+                            <td>{{ $pedido->telefono }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dirección:</strong></td>
+                            <td>{{ $pedido->direccion }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Importe Total:</strong></td>
+                            <td>{{ $totalImporte }} €</td>
+                        </tr>
                     </table>
                     <div class="btn_box">
-                        <button type="button" class="btn btn-success">Marcar como Enviado</button>
+                        <form action="{{ route('pedido-admin-enviar', $pedido->id) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-success">Marcar como Enviado</button>
+                        </form>
                     </div>
                 </div>
             </div>

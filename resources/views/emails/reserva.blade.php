@@ -47,7 +47,7 @@
   </td>
     <td>
     <p><i class="bi bi-people-fill"></i> Personas : 
-    <span class="content">{{ $reserva->NumPersonas }}</span></p> 
+    <span class="content">{{ $reserva->comensales }}</span></p> 
   </td>
   </tr>
 
@@ -63,9 +63,17 @@
     <tr>
       <td>
     <p><i class="bi bi-telephone-fill"></i>  Telf:
-   <span class="content"> 603859487</span></p>
+   <span class="content"> {{ $reserva->telefono }}</span></p>
   </td>
   </tr>
+  @if(!$reserva->confirmada)
+    <tr>
+      <td>
+    <p>  Pulsa en el siguiente botón para confirmar la reserva:
+  <a href="{{ route('reserva-confirmar').'/'.$reserva->token }}" class="btn btn-info">Confirmar</a></p>
+  </td>
+  </tr>
+@endif
 
   </table>
 <hr>
@@ -85,4 +93,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
 </html>
-

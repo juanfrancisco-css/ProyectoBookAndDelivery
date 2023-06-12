@@ -10,6 +10,21 @@
           La Carta
         </h2>
       </div>
+      <!-- mensajes de exitos o de error-->       
+      @if (session('success'))
+      <h6 class="alert alert-success">{{session('success')}}</h6>
+      @endif
+
+      @if ($errors->any())
+      <div class="alert alert-danger">
+          <p>Por favor, corrige los siguientes errores:</p>
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+      @endif
 
       <ul class="filters_menu">
         <li class="active" data-filter="*">todo</li>
